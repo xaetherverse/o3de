@@ -8,6 +8,7 @@ This repository begins as a fork of Open 3D Engine. The long-term product is **X
 
 - **XAETHER VERSE runtime:** The O3DE fork evolves into the foundational runtime for the XAETHER VERSE.
 - **XAEforge:** XAEforge is a protected creator and developer system that lives *inside* the XAETHER VERSE. It is not a separate outside application.
+- **XAEmerge:** XAEmerge is the member creation system inside the XAETHER VERSE for voice-led ideas, object scans, photos, video, uploads, previews, and approved publishing.
 - **Creator access:** Approved creators, developers, employees, contractors, and authorized AI agents receive role-based, scoped access through XAEforge.
 
 ## Local-first foundation
@@ -56,6 +57,46 @@ XAEmerge lets regular members contribute to their Home Hub, social spaces, and w
 
 XAEmerge is a local-first module. Capture, drafts, previews, and personal Home Hub work should function locally where practical. Shared publishing, collaboration, and social distribution remain additive networked services behind explicit interfaces.
 
+## Home Hub module
+
+The Home Hub is a first-class modular XAETHER VERSE system, not a hard-coded screen or a one-off world map. It is a member's primary personal space and must remain independently buildable, testable, and replaceable.
+
+The initial Home Hub module includes:
+
+- member identity and Home Hub profile data
+- local capture, scan, photo, video, and upload intake through XAEmerge
+- personal home scenes, owned assets, layouts, and saved drafts
+- preview and approval flows before personal or shared-world publishing
+- privacy, ownership, access, and sharing controls
+- adapters to social spaces, world travel, avatar systems, economy services, and notifications
+
+The Home Hub owns its personal-state rules. It connects to other modules through documented interfaces, so social, scanning, rendering, or publishing components can change without breaking the member's Home Hub.
+
+## Downtown and world construction modules
+
+Downtowns and other world areas must also be modular. A city is assembled from independently managed world components rather than one permanent, indivisible build.
+
+Each downtown must separate:
+
+- open lots and parcels, aligned as closely as practical to real-world lot parcels and preserved for future development
+- districts and zoning or world-rule data
+- roads, transit, utilities, and public spaces
+- exterior buildings, interiors, and interactive services
+- environmental systems such as lighting, weather, sound, and traffic
+- local ownership, permissions, economy hooks, and publishing rules
+
+A downtown composition module coordinates those pieces, while each lot, building, interior, service, and district remains independently updateable. The runtime should stream only the nearby areas and features a member is using, rather than loading an entire downtown or universe at once.
+
+## Developer documentation rule
+
+Coders do not need to guess the architecture. Every module must carry a short technical guide that states:
+
+1. its purpose and ownership
+2. its local-first behavior and performance boundaries
+3. its data model and permission model
+4. the public interfaces it provides and depends on
+5. its tests, build path, and replacement path from O3DE-derived code
+
 ## Implementation rule
 
-Every new XAETHER feature proposal must identify its module boundary, local-first behavior, permissions model, interfaces to other modules, and a replacement path if it depends on O3DE-derived code.
+Every new XAETHER feature proposal must identify its module boundary, local-first behavior, permissions model, interfaces to other modules, performance and streaming boundaries where relevant, and a replacement path if it depends on O3DE-derived code.
