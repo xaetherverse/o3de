@@ -29,7 +29,7 @@ Networked services must be additive rather than required for core local operatio
 
 ## Universal modular design requirement
 
-Every XAETHER VERSE feature and component must be built as a modular design from day one. This includes XAE Studio, XAEforge, XAEmerge, the Home Hub, social systems, world areas, downtowns, lots, buildings, interiors, avatars, economy services, capture tools, publishing, and future systems.
+Every XAETHER VERSE feature and component must be built as a modular design from day one. This includes XAE Studio, XAEforge, XAEmerge, the Home Hub, social systems, world areas, galaxies, downtowns, lots, buildings, interiors, avatars, economy services, capture tools, publishing, streaming, theaters, media experiences, and future systems.
 
 Each module must be independently buildable, testable, updateable, replaceable, and scalable without requiring a rebuild of the full Verse.
 
@@ -42,6 +42,16 @@ Each module must be independently buildable, testable, updateable, replaceable, 
 7. Define streaming, loading, and performance boundaries for every world-facing module so the runtime loads only the nearby or actively used pieces.
 
 This structure ensures XAETHER VERSE can progressively become its own engine while preserving a stable, buildable product throughout the transition.
+
+## Practical modular examples
+
+These examples show the design rule in practice. They are the starting references for future XAETHER VERSE modules.
+
+- **Home Hub:** A member's personal space is its own module. It owns home identity, personal scenes, layouts, drafts, privacy, and sharing. It connects to scans, social spaces, avatars, notifications, economy services, and world travel through documented interfaces.
+- **XAE Studio:** The creation package stays modular inside the Verse. XAEforge is the protected advanced builder system. XAEmerge is the member creation system for voice ideas, object scans, photos, video, and AI-assisted proposals. They share asset, preview, permission, publishing, and placement interfaces without becoming one inseparable codebase.
+- **Downtowns:** A downtown is a composition of separate lots, districts, roads, buildings, interiors, utilities, public spaces, services, and environment systems. Each part can be expanded or replaced without rebuilding the city.
+- **Universe and galaxy construction:** A galaxy is a composition layer, not one monolithic world file. Galaxy, star-system, planetary, city, and local-area modules must have clear boundaries so the runtime can load only the location and services a member is actively using.
+- **Social, streaming, and theater experiences:** Social feeds, live presence, messaging, streaming playback, home theaters, and venue theaters must be separate feature modules. They connect through identity, permissions, media, and world-placement interfaces, so a media or social upgrade does not force a rewrite of Home Hub or world systems.
 
 ## XAEforge core, first build layer
 
