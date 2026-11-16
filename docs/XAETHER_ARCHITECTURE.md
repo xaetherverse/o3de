@@ -7,9 +7,19 @@ This repository begins as a fork of Open 3D Engine. The long-term product is **X
 ## Core structure
 
 - **XAETHER VERSE runtime:** The O3DE fork evolves into the foundational runtime for the XAETHER VERSE.
-- **XAEforge:** XAEforge is a protected creator and developer system that lives *inside* the XAETHER VERSE. It is not a separate outside application.
-- **XAEmerge:** XAEmerge is the member creation system inside the XAETHER VERSE for voice-led ideas, object scans, photos, video, uploads, previews, and approved publishing.
+- **XAE Studio:** XAE Studio is the modular creation package that lives inside the XAETHER VERSE. It brings together the protected builder system and the everyday member creation system without making either one a separate outside application.
+- **XAEforge:** XAEforge is the protected advanced builder, software, engineering, and developer system inside XAE Studio and the XAETHER VERSE.
+- **XAEmerge:** XAEmerge is the everyday member creation system inside XAE Studio and the XAETHER VERSE for voice-led ideas, object scans, photos, video, uploads, previews, and approved publishing.
 - **Creator access:** Approved creators, developers, employees, contractors, and authorized AI agents receive role-based, scoped access through XAEforge.
+
+## XAE Studio package
+
+XAE Studio is a modular package inside the XAETHER VERSE, not a separate application. It has two connected but independently replaceable sides:
+
+- **XAEforge:** the advanced workspace for approved builders, developers, employees, contractors, and authorized AI agents. It provides secure workspaces, code and project tools, build and test tools, previews, publishing, permissions, and approval gates.
+- **XAEmerge:** the simple creation experience for everyday members. Members can speak an idea, scan an object, upload photos or video, review an AI-generated proposal, and submit it into their personal Home Hub, social spaces, or the shared Verse under the appropriate permissions and approval rules.
+
+XAEforge and XAEmerge share documented interfaces for assets, previews, permissions, publishing, and world placement. Either side can evolve without forcing a rewrite of the other side or the rest of the XAETHER VERSE.
 
 ## Local-first foundation
 
@@ -17,9 +27,11 @@ The core engine and world experience must be designed to run locally on each sup
 
 Networked services must be additive rather than required for core local operation. Synchronization, social presence, shared worlds, publishing, and community services should use clear interfaces so they can evolve independently of the local runtime.
 
-## Modular replacement requirement
+## Universal modular design requirement
 
-All XAETHER-owned systems must be modular and independently replaceable from day one.
+Every XAETHER VERSE feature and component must be built as a modular design from day one. This includes XAE Studio, XAEforge, XAEmerge, the Home Hub, social systems, world areas, downtowns, lots, buildings, interiors, avatars, economy services, capture tools, publishing, and future systems.
+
+Each module must be independently buildable, testable, updateable, replaceable, and scalable without requiring a rebuild of the full Verse.
 
 1. Keep XAETHER modules behind explicit interfaces and contracts.
 2. Isolate O3DE-derived integrations behind adapters where practical.
@@ -27,6 +39,7 @@ All XAETHER-owned systems must be modular and independently replaceable from day
 4. Keep XAETHER-owned code, data schemas, tooling, and tests in clearly named modules.
 5. Replace O3DE-derived components gradually as XAETHER-owned equivalents are ready, without a single disruptive separation effort.
 6. Retain required upstream license and notice material for code that remains derived from O3DE.
+7. Define streaming, loading, and performance boundaries for every world-facing module so the runtime loads only the nearby or actively used pieces.
 
 This structure ensures XAETHER VERSE can progressively become its own engine while preserving a stable, buildable product throughout the transition.
 
@@ -96,6 +109,7 @@ Coders do not need to guess the architecture. Every module must carry a short te
 3. its data model and permission model
 4. the public interfaces it provides and depends on
 5. its tests, build path, and replacement path from O3DE-derived code
+6. how it fits into the XAE Studio, Home Hub, world, or other relevant modular composition
 
 ## Implementation rule
 
