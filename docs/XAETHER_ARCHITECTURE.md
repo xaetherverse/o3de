@@ -29,7 +29,7 @@ Networked services must be additive rather than required for core local operatio
 
 ## Universal modular design requirement
 
-Every XAETHER VERSE feature and component must be built as a modular design from day one. This includes XAE Studio, XAEforge, XAEmerge, the Home Hub, social systems, world areas, galaxies, downtowns, lots, buildings, interiors, avatars, economy services, capture tools, publishing, streaming, theaters, media experiences, and future systems.
+Every XAETHER VERSE feature and component must be built as a modular design from day one. This includes XAE Studio, XAEforge, XAEmerge, the Home Hub, social systems, world areas, galaxies, downtowns, lots, buildings, interiors, life-mimicking avatar systems, economy services, capture tools, publishing, streaming, theaters, media experiences, and future systems.
 
 Each module must be independently buildable, testable, updateable, replaceable, and scalable without requiring a rebuild of the full Verse.
 
@@ -52,6 +52,7 @@ These examples show the design rule in practice. They are the starting reference
 - **Downtowns:** A downtown is a composition of separate lots, districts, roads, buildings, interiors, utilities, public spaces, services, and environment systems. Each part can be expanded or replaced without rebuilding the city.
 - **Universe and galaxy construction:** A galaxy is a composition layer, not one monolithic world file. Galaxy, star-system, planetary, city, and local-area modules must have clear boundaries so the runtime can load only the location and services a member is actively using.
 - **Social, streaming, and theater experiences:** Social feeds, live presence, messaging, streaming playback, home theaters, and venue theaters must be separate feature modules. They connect through identity, permissions, media, and world-placement interfaces, so a media or social upgrade does not force a rewrite of Home Hub or world systems.
+- **Life-mimicking avatars:** The shared avatar system supports real human avatars, non-human avatars, animals, and other life-mimicking forms through separate but compatible identity, appearance, movement, animation, behavior, and world-placement modules.
 
 ## XAEforge core, first build layer
 
@@ -94,6 +95,26 @@ The initial Home Hub module includes:
 - adapters to social spaces, world travel, avatar systems, economy services, and notifications
 
 The Home Hub owns its personal-state rules. It connects to other modules through documented interfaces, so social, scanning, rendering, or publishing components can change without breaking the member's Home Hub.
+
+## Life-mimicking avatar system
+
+The **Life-Mimicking Avatar System** is a modular core XAETHER VERSE system for avatars that represent or simulate living forms. It includes humans, animals, creatures, and other life-mimicking avatars.
+
+- **RHA, Real Human Avatar:** The avatar for a real human member.
+- **NHA, Non-Human Avatar:** The avatar type for the Verse's persistent non-human residents and other life-mimicking non-human forms, including animals and creatures.
+
+RHA and NHA are both avatars in the same shared system. Their visible distinction is the on-screen label. Their common avatar interfaces must work across supported forms without treating any one body type as a separate hard-coded system.
+
+The system must keep these parts modular and independently replaceable:
+
+- identity, ownership, permissions, and privacy
+- appearance, body form, assets, and customization
+- movement, animation, interaction, and accessibility behavior
+- real-human control, AI-driven behavior, and persistent resident behavior
+- local presentation, nearby-world loading, and networked shared-world presence
+- placement in Home Hubs, social spaces, downtowns, worlds, and future galaxy areas
+
+This lets XAETHER VERSE add, improve, test, or replace human, animal, creature, animation, behavior, or presence capabilities without rebuilding the wider Verse.
 
 ## Downtown and world construction modules
 
