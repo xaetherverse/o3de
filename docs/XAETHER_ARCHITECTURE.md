@@ -42,6 +42,20 @@ The first major XAETHER-specific build layer is the core XAEforge system inside 
 
 Once this core exists, later XAETHER VERSE systems can be built and expanded through it: Home Hub creation, social spaces, persistent world systems, creator publishing, economy services, avatars, and other world features.
 
+## XAEmerge member creation layer
+
+**XAEmerge** is the everyday member creation layer inside the XAETHER VERSE. It is distinct from XAEforge, which remains the protected software, engineering, and advanced builder environment.
+
+XAEmerge lets regular members contribute to their Home Hub, social spaces, and world experience without using developer tools. The first version must support:
+
+- voice descriptions that an AI turns into proposed assets or experiences
+- object scans, photos, video, and uploads that an AI converts into proposed 3D content
+- clear previews before anything is added to a Home Hub, social space, or shared world
+- member ownership, privacy controls, permissions, and approval rules for every contribution
+- modular interfaces between capture, AI generation, asset processing, preview, publishing, and shared-world placement
+
+XAEmerge is a local-first module. Capture, drafts, previews, and personal Home Hub work should function locally where practical. Shared publishing, collaboration, and social distribution remain additive networked services behind explicit interfaces.
+
 ## Implementation rule
 
 Every new XAETHER feature proposal must identify its module boundary, local-first behavior, permissions model, interfaces to other modules, and a replacement path if it depends on O3DE-derived code.
